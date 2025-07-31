@@ -1,0 +1,43 @@
+1  Integer pp, qq, rr
+2  Set pp=0, qq=6, rr=7
+3  pp=rr+pp
+4  P=(rr & 84) ^ rr
+5  if(((qq & pp) ^ (rr & qq))
+6     if(((qq ^ pp) < (rr ^ qq)))
+7         rr=(3+1)*pp
+8     End if
+9  End if
+10 Print pp+qq+rr
+A. 29
+B. 18
+C. 10
+D. 16
+
+Note:
+
+& is the bitwise AND operator that compares each bit of the first operand to the corresponding bit of the second operand. If both bits are 1, the corresponding result bit is set to 1. Otherwise, it is set to 0.
+
+^ is the bitwise XOR operator that compares each bit of its first operand to the corresponding bit of its second operand. If one bit is 0 and the other is 1, the result bit is set to 1. Otherwise, it is set to 0.
+
+Explanation:
+In line 3, variable pp will be updated with value 7+0 = 7.
+In line 4, variable p will be reupdated; first, parentheses will be resolved/evaluated then value will be evaluated with the bitwise XOR operator:
+
+(7 & 84) ^ 7 = 4 ^ 7 = 3
+
+In line 5, the if condition will be evaluated:
+(6 & 3) ^ (7 & 6)
+→ 2 ^ 6 → since the condition is True, it will go inside.
+
+From line 6, it will evaluate the next condition in inner if:
+(6 ^ 3) < (7 ^ 6)
+→ 5 < 1 → False, so line 7 will be skipped.
+
+Hence, rr will remain 7.
+Statement 10 will execute with the updated values:
+
+pp = 7, qq = 6, rr = 3 + 6 + 7 = 16
+
+Final Output = 16
+
+Answer: D
