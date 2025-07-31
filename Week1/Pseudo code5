@@ -1,0 +1,20 @@
+1  Integer pp, qq, rr
+2  Set pp = 1, qq = 2, rr = 8
+3  if ((5+8) < (7+qq))
+4      if ((qq + pp) < (pp = qq))
+5          rr = (rr + 6) + rr
+6          rr = (qq + pp) + pp
+7      End if
+8      rr = rr + pp
+9  Else
+10     if ((pp + qq - rr) < (rr + pp))
+11         pp = pp + rr
+12     End if
+13     rr = (pp & rr) + pp
+14 End if
+15 Print pp + qq + rr
+
+
+Ans 28
+Explanation : In this first if loop get false then we go to second if condition
+              get true then we calculate pp and rr at finally we add all three values
